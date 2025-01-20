@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5555;
- 
+const PORT = process.env.PORT || 5555; // Use PORT environment variable or fallback to 5555
+
 // Middleware
 app.use(cors());
 app.use(express.json());
- 
+
 // MongoDB Connection
 const MONGO_URI =
   "mongodb+srv://rahilhussain874:YuDRaTjv7LFWAO7P@cluster0.9r8cl.mongodb.net/"; // Replace with your MongoDB connection string
